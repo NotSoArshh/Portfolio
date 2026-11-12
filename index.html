@@ -147,14 +147,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .spg .sd{background:var(--g);box-shadow:0 0 8px var(--g)}.spg:hover{border-color:var(--g);color:var(--w);box-shadow:0 0 20px rgba(52,211,153,.12)}.spg::before{background:rgba(52,211,153,.07)}.spg:hover::before{opacity:1}
 
 /* ── PROJECTS ── */
-.wc{border:1px solid var(--b);border-radius:12px;padding:3rem 2rem;text-align:center;background:var(--bg2);max-width:400px;position:relative;overflow:hidden}
-.wc::before{content:'';position:absolute;left:-100%;top:0;width:60%;height:1px;background:linear-gradient(90deg,transparent,var(--pk),var(--p),transparent);animation:wcScan 2.5s linear infinite}
-.wc::after{content:'';position:absolute;left:0;bottom:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--c),transparent);opacity:.4}
-@keyframes wcScan{to{left:200%}}
-.wi{font-size:2.2rem;display:block;margin-bottom:1rem;animation:spinSlow 5s linear infinite;filter:drop-shadow(0 0 12px var(--p))}
-@keyframes spinSlow{to{transform:rotate(360deg)}}
-.wb{font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.2em;color:var(--pk);text-shadow:0 0 10px var(--pk);margin-bottom:.7rem}
-.wm{font-family:'Orbitron',sans-serif;font-size:.95rem;font-weight:600;color:var(--w)}
+.pg{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.pc{display:flex;flex-direction:column;min-height:220px;padding:1.35rem;text-decoration:none;background:var(--bg2);border:1px solid var(--b);border-radius:10px;position:relative;overflow:hidden;transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+.pc::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(139,92,246,.1),transparent 55%,rgba(34,211,238,.05));opacity:0;transition:opacity .22s}
+.pc::after{content:'VIEW ON GITHUB ↗';position:absolute;right:1.2rem;bottom:1.15rem;font-family:'JetBrains Mono',monospace;font-size:.57rem;letter-spacing:.08em;color:var(--c);opacity:0;transform:translateY(4px);transition:opacity .22s,transform .22s}
+.pc:hover{transform:translateY(-5px);border-color:var(--p);box-shadow:0 12px 30px rgba(139,92,246,.16)}
+.pc:hover::before{opacity:1}.pc:hover::after{opacity:1;transform:translateY(0)}
+.pt,.pd,.ptag{position:relative;z-index:1}
+.pt{font-family:'Orbitron',sans-serif;font-size:.9rem;letter-spacing:.04em;color:var(--w);margin-bottom:.8rem}
+.pd{font-size:.8rem;line-height:1.7;color:var(--m);margin-bottom:1.2rem}
+.ptag{align-self:flex-start;margin-top:auto;padding:.28rem .5rem;border:1px solid rgba(139,92,246,.35);border-radius:3px;font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.08em;color:var(--p);text-transform:uppercase}
 
 /* ── CONTACT ── */
 .cb{max-width:480px}
@@ -276,10 +278,62 @@ footer span{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--
   <div class="s-eye">projects</div>
   <div class="s-title">THINGS I'VE BUILT</div>
   <div class="reveal">
-    <div class="wc">
-      <span class="wi">⚙</span>
-      <div class="wb">// STATUS</div>
-      <div class="wm">Currently working.</div>
+    <div class="pg">
+      <a class="pc" href="https://github.com/NotSoArshh/SC_ML_4" target="_blank" rel="noopener noreferrer">
+        <div class="pt">SC_ML_4</div>
+        <p class="pd">Machine learning project exploring a practical supervised learning workflow.</p>
+        <span class="ptag">Python</span>
+      </a>
+      <a class="pc" href="https://github.com/NotSoArshh/SC_ML_3" target="_blank" rel="noopener noreferrer">
+        <div class="pt">SC_ML_3</div>
+        <p class="pd">A focused machine learning experiment built while strengthening core ML concepts.</p>
+        <span class="ptag">Python</span>
+      </a>
+      <a class="pc" href="https://github.com/NotSoArshh/SC_ML_2" target="_blank" rel="noopener noreferrer">
+        <div class="pt">SC_ML_2</div>
+        <p class="pd">A hands-on machine learning project covering data preparation and model building.</p>
+        <span class="ptag">Python</span>
+      </a>
+      <a class="pc" href="https://github.com/NotSoArshh/SCT_ML_1" target="_blank" rel="noopener noreferrer">
+        <div class="pt">SCT_ML_1</div>
+        <p class="pd">Multiple Linear Regression for estimating residential real estate prices.</p>
+        <span class="ptag">Python</span>
+      </a>
+      <a class="pc" href="https://github.com/NotSoArshh/GridMind-AI" target="_blank" rel="noopener noreferrer">
+        <div class="pt">GridMind AI</div>
+        <p class="pd">Predict demand, balance power, and prevent overloads with an AI-powered energy solution.</p>
+        <span class="ptag">TypeScript</span>
+      </a>
+      <a class="pc" href="https://github.com/NotSoArshh/ProofStack-AI" target="_blank" rel="noopener noreferrer">
+        <div class="pt">ProofStack AI</div>
+        <p class="pd">Turns complex research questions into structured, evidence-backed decision briefs.</p>
+        <span class="ptag">TypeScript</span>
+      </a>
+      <a class="pc" href="https://github.com/NotSoArshh/CraftBridge-AI-Improved" target="_blank" rel="noopener noreferrer">
+        <div class="pt">CraftBridge AI</div>
+        <p class="pd">An improved AI-focused build connecting ideas, users, and useful digital experiences.</p>
+        <span class="ptag">TypeScript</span>
+      </a>
+      <a class="pc" href="https://github.com/NotSoArshh/craftbridge" target="_blank" rel="noopener noreferrer">
+        <div class="pt">CraftBridge</div>
+        <p class="pd">A web project built to connect creators with opportunities and collaboration.</p>
+        <span class="ptag">JavaScript</span>
+      </a>
+      <a class="pc" href="https://github.com/NotSoArshh/MP3-Song-Player-using-Python" target="_blank" rel="noopener noreferrer">
+        <div class="pt">MP3 Song Player</div>
+        <p class="pd">A Python music player with a friendly interface, playback, and file management.</p>
+        <span class="ptag">Python</span>
+      </a>
+      <a class="pc" href="https://github.com/NotSoArshh/Birthdayyy" target="_blank" rel="noopener noreferrer">
+        <div class="pt">Birthdayyy</div>
+        <p class="pd">An interactive animated mini-site created as a special online birthday experience.</p>
+        <span class="ptag">HTML</span>
+      </a>
+      <a class="pc" href="https://github.com/NotSoArshh/Birthday" target="_blank" rel="noopener noreferrer">
+        <div class="pt">Birthday</div>
+        <p class="pd">A simple celebratory web experience with a personal touch.</p>
+        <span class="ptag">HTML</span>
+      </a>
     </div>
   </div>
 </div></section>
